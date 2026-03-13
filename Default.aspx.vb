@@ -5,13 +5,11 @@ Public Class _Default
     Inherits Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
-        TextBox5.Text = ""
-
-
+        TextBox1.Text.DefaultIfEmpty
+        TextBox2.Text.DefaultIfEmpty
+        TextBox3.Text.DefaultIfEmpty
+        TextBox4.Text.DefaultIfEmpty
+        TextBox5.Text.DefaultIfEmpty
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -28,7 +26,7 @@ Public Class _Default
 
             MsgBox("se guardo con exito", MsgBoxStyle.Information, "Success")
         Catch ex As Exception
-            MsgBox("Tuvimos un error al momento de ingresar la pola al sistema", MsgBoxStyle.Critical, "Error = " & ex.ToString)
+            MsgBox("Tuvimos un error al momento de ingresar la pola al sistema = " & ex.ToString, MsgBoxStyle.Critical, "Error")
         End Try
 
         conexion.Close()
