@@ -52,3 +52,29 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Visual Studio archivos de usuario
+*.user
+*.userosscache
+*.sln.docstates
+
+# Carpeta de caché de VS (muy importante en versiones modernas)
+.vs/
+
+# NuGet Packages
+**/packages/*
+# Excepto el ejecutable de nuget si lo usas (opcional)
+!**/packages/repositories.config
+
+# Archivos de publicación (Publish profiles)
+*.Publish.xml
+*.pubxml
+*.pubxml.user
+
+# Bases de datos locales en App_Data (mdf/ldf)
+# Solo agrégalo si no quieres compartir la base de datos de prueba
+# App_Data/*.mdf
+# App_Data/*.ldf
+
+# Archivos temporales de ASP.NET
+obj/
